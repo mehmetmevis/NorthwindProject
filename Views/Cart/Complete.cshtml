@@ -1,0 +1,43 @@
+﻿@model ShippingDetailsViewModel
+<partial name="_ValidationScriptsPartial" />
+@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+<form asp-controller="Cart" asp-action="Complete" method="post">
+    <div class="form-group">
+        <label asp-for="ShippingDetail.FirstName">Ad: </label>
+        <input asp-for="ShippingDetail.FirstName" class="form-control" placeholder="Müşteri Adı" />
+        <span asp-validation-for="ShippingDetail.FirstName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ShippingDetail.LastName">Soyad: </label>
+        <input asp-for="ShippingDetail.LastName" class="form-control" placeholder="Müşteri Soyadı" />
+        <span asp-validation-for="ShippingDetail.LastName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ShippingDetail.Email">E-posta: </label>
+        <input asp-for="ShippingDetail.Email" class="form-control" placeholder="E-posta" />
+        <span asp-validation-for="ShippingDetail.Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ShippingDetail.Age">Yaş: </label>
+        <input asp-for="ShippingDetail.Age" class="form-control" placeholder="Müşteri Yaşı" />
+        <span asp-validation-for="ShippingDetail.Age" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ShippingDetail.City">Şehir: </label>
+        <input asp-for="ShippingDetail.City" class="form-control" placeholder="Şehir Bilgisi" />
+        <span asp-validation-for="ShippingDetail.City" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ShippingDetail.Address">Adress: </label>
+        <input asp-for="ShippingDetail.Address" class="form-control" placeholder="Adress" />
+        <span asp-validation-for="ShippingDetail.Address" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Kaydet" class="btn btn-success btn-group-sm" />
+    </div>
+
+</form>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
